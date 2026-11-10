@@ -1,0 +1,1116 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>من الانتشار المحلي إلى الريادة الرقمية في سوق الرياض | العساكر × KAAF Group</title>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts: Cairo & IBM Plex Sans Arabic -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- FontAwesome 6 Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        kaaf: {
+                            blue: '#0A4C86',
+                            blueLight: '#1C75C8',
+                            blueDeep: '#05233E',
+                            blueDarkest: '#031424',
+                            green: '#00875A',
+                            greenLight: '#00B377',
+                            greenDeep: '#023824',
+                            gold: '#D4AF37',
+                            goldLight: '#F5DE88',
+                            goldDark: '#A6821E',
+                            purple: '#7C3AED',
+                            purpleLight: '#A78BFA',
+                            rose: '#E11D48',
+                            roseLight: '#FB7185',
+                            cyan: '#06B6D4',
+                            cyanLight: '#67E8F9',
+                            amber: '#F59E0B',
+                            dark: '#030812',
+                            darkSlate: '#081220',
+                            cardBg: '#0B1A2E',
+                            border: '#1B314B'
+                        }
+                    },
+                    fontFamily: {
+                        cairo: ['Cairo', 'sans-serif'],
+                        ibm: ['IBM Plex Sans Arabic', 'sans-serif']
+                    },
+                    boxShadow: {
+                        'glow-blue': '0 0 35px -5px rgba(10, 76, 134, 0.6)',
+                        'glow-gold': '0 0 35px -5px rgba(212, 175, 55, 0.55)',
+                        'glow-cyan': '0 0 35px -5px rgba(6, 182, 212, 0.6)',
+                        'glow-green': '0 0 35px -5px rgba(0, 135, 90, 0.6)',
+                        'glow-purple': '0 0 35px -5px rgba(124, 58, 237, 0.6)',
+                        'web-card': '0 20px 45px -15px rgba(0, 0, 0, 0.85), 0 0 0 1px rgba(255, 255, 255, 0.08)'
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            font-family: 'Cairo', 'IBM Plex Sans Arabic', sans-serif;
+            background-color: #030812;
+            color: #E2E8F0;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        #interactive-bg-canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            z-index: 0;
+            pointer-events: none;
+            opacity: 0.65;
+        }
+
+        .kaaf-ribbon {
+            background: linear-gradient(90deg, 
+                #0A4C86 0%, 
+                #06B6D4 20%, 
+                #00875A 40%, 
+                #D4AF37 60%, 
+                #7C3AED 80%, 
+                #E11D48 100%
+            );
+            height: 4px;
+        }
+
+        .web-card-blue {
+            background: linear-gradient(135deg, rgba(10, 30, 56, 0.85) 0%, rgba(5, 16, 32, 0.95) 100%);
+            border: 1px solid rgba(28, 117, 200, 0.35);
+            backdrop-filter: blur(14px);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .web-card-blue:hover {
+            border-color: rgba(28, 117, 200, 0.75);
+            transform: translateY(-3px);
+            box-shadow: 0 16px 35px -10px rgba(10, 76, 134, 0.5);
+        }
+
+        .web-card-gold {
+            background: linear-gradient(135deg, rgba(45, 36, 15, 0.85) 0%, rgba(18, 14, 5, 0.95) 100%);
+            border: 1px solid rgba(212, 175, 55, 0.4);
+            backdrop-filter: blur(14px);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .web-card-gold:hover {
+            border-color: rgba(212, 175, 55, 0.85);
+            transform: translateY(-3px);
+            box-shadow: 0 16px 35px -10px rgba(212, 175, 55, 0.5);
+        }
+
+        .web-card-purple {
+            background: linear-gradient(135deg, rgba(30, 18, 54, 0.85) 0%, rgba(14, 8, 28, 0.95) 100%);
+            border: 1px solid rgba(167, 139, 250, 0.35);
+            backdrop-filter: blur(14px);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .web-card-purple:hover {
+            border-color: rgba(167, 139, 250, 0.75);
+            box-shadow: 0 16px 35px -10px rgba(124, 58, 237, 0.5);
+        }
+
+        .web-card-green {
+            background: linear-gradient(135deg, rgba(8, 38, 28, 0.85) 0%, rgba(4, 20, 15, 0.95) 100%);
+            border: 1px solid rgba(0, 179, 119, 0.35);
+            backdrop-filter: blur(14px);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .web-card-green:hover {
+            border-color: rgba(0, 179, 119, 0.75);
+            box-shadow: 0 16px 35px -10px rgba(0, 135, 90, 0.5);
+        }
+
+        .web-card-cyan {
+            background: linear-gradient(135deg, rgba(8, 36, 48, 0.85) 0%, rgba(4, 18, 26, 0.95) 100%);
+            border: 1px solid rgba(6, 182, 212, 0.35);
+            backdrop-filter: blur(14px);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .web-card-cyan:hover {
+            border-color: rgba(6, 182, 212, 0.75);
+            box-shadow: 0 16px 35px -10px rgba(6, 182, 212, 0.5);
+        }
+
+        @keyframes float-brand {
+            0%, 100% { transform: translateY(0px); box-shadow: 0 10px 25px -5px rgba(10, 76, 134, 0.6); }
+            50% { transform: translateY(-7px); box-shadow: 0 18px 30px -5px rgba(10, 76, 134, 0.8); }
+        }
+        @keyframes float-wa {
+            0%, 100% { transform: translateY(0px) scale(1); box-shadow: 0 10px 25px -5px rgba(37, 211, 102, 0.5); }
+            50% { transform: translateY(-7px) scale(1.03); box-shadow: 0 18px 30px -5px rgba(37, 211, 102, 0.8); }
+        }
+
+        .anim-float-brand { animation: float-brand 4s ease-in-out infinite; }
+        .anim-float-wa { animation: float-wa 4s ease-in-out infinite 0.5s; }
+
+        .nav-link {
+            position: relative;
+            transition: color 0.2s;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -6px;
+            right: 0;
+            width: 0;
+            height: 2px;
+            background: #D4AF37;
+            transition: width 0.3s ease;
+        }
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        @media print {
+            body { background-color: #fff !important; color: #111 !important; }
+            #interactive-bg-canvas, aside, header, #floating-kaaf-btn, #floating-wa-btn { display: none !important; }
+            .web-card-blue, .web-card-gold, .web-card-green, .web-card-purple, .web-card-cyan {
+                background: #f8fafc !important;
+                border: 1px solid #cbd5e1 !important;
+                color: #0f172a !important;
+                box-shadow: none !important;
+            }
+            .text-white { color: #0f172a !important; }
+            .text-gray-200, .text-gray-300, .text-gray-400 { color: #334155 !important; }
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-kaaf-gold selection:text-slate-950">
+
+    <!-- Interactive Ambient Canvas Layer -->
+    <canvas id="interactive-bg-canvas"></canvas>
+
+    <!-- Floating Brand Logo (Bottom Left) -->
+    <aside id="floating-kaaf-btn" class="fixed bottom-6 left-6 z-50">
+        <a href="https://kaafmarketing.sa/" target="_blank" rel="noopener noreferrer" title="مجموعة كاف | KAAF Group" class="block w-14 h-14 rounded-full overflow-hidden border-2 border-kaaf-cyanLight/80 p-0.5 bg-black/90 anim-float-brand transition-all hover:scale-110 group backdrop-blur-md">
+            <img src="https://i.ibb.co/qLQcG9vr/Whats-App-Image-2026-08-26-at-11-29-58.jpg" alt="KAAF Group Logo" class="w-full h-full object-cover rounded-full" onerror="this.src='https://placehold.co/100x100/0A4C86/ffffff?text=KAAF'">
+        </a>
+    </aside>
+
+    <!-- Floating WhatsApp CTA (Bottom Right) -->
+    <aside id="floating-wa-btn" class="fixed bottom-6 right-6 z-50">
+        <a href="https://wa.me/966537553910" target="_blank" rel="noopener noreferrer" title="التواصل المباشر مع مستشار تطوير الأعمال (+966 53 755 3910)" class="w-14 h-14 rounded-full bg-[#25D366] text-white flex items-center justify-center border-2 border-emerald-200/80 anim-float-wa transition-all hover:scale-110 shadow-lg">
+            <i class="fa-brands fa-whatsapp text-3xl"></i>
+        </a>
+    </aside>
+
+    <!-- Document Navigation Bar -->
+    <header class="sticky top-0 z-50 bg-kaaf-dark/90 backdrop-blur-xl border-b border-kaaf-border/70 px-4 lg:px-12 py-3.5 transition-all">
+        <div class="max-w-7xl mx-auto flex items-center justify-between">
+            <!-- Brand Logo & Identity (Right in RTL) -->
+            <div class="flex items-center gap-3.5">
+                <div class="w-11 h-11 rounded-2xl overflow-hidden border border-kaaf-blueLight/50 p-0.5 bg-black shrink-0 shadow-glow-blue">
+                    <img src="https://i.ibb.co/qLQcG9vr/Whats-App-Image-2026-08-26-at-11-29-58.jpg" alt="KAAF Group Logo" class="w-full h-full object-cover rounded-xl" onerror="this.src='https://placehold.co/100x100/0A4C86/ffffff?text=KAAF'">
+                </div>
+                <div>
+                    <div class="flex items-center gap-2">
+                        <span class="text-base font-black text-white tracking-wide font-ibm">KAAF Group</span>
+                        <span class="px-2 py-0.5 rounded-full bg-kaaf-gold/20 text-kaaf-goldLight text-[10px] font-extrabold border border-kaaf-gold/40">عرض خاص: العساكر</span>
+                    </div>
+                    <p class="text-[11px] text-gray-400 font-medium">الأجهزة الكهربائية والتكييف • خطة النمو وسوق الرياض</p>
+                </div>
+            </div>
+
+            <!-- Anchor Links -->
+            <nav class="hidden lg:flex items-center gap-5 text-xs font-bold text-gray-300">
+                <a href="#vision" class="nav-link hover:text-white">الرؤية والأهداف</a>
+                <a href="#services-ecosystem" class="nav-link hover:text-white">المنظومة المتكاملة</a>
+                <a href="#social-service" class="nav-link hover:text-white">السوشيال ميديا</a>
+                <a href="#ads-service" class="nav-link hover:text-white">الحملات الإعلانية</a>
+                <a href="#seo-service" class="nav-link hover:text-white">تحسين محركات البحث SEO</a>
+                <a href="#funnel-synergy" class="nav-link hover:text-white text-kaaf-goldLight"><i class="fa-solid fa-filter text-xs ml-1"></i> تكامل الخدمات</a>
+                <a href="#why-kaaf" class="nav-link hover:text-white">لماذا KAAF؟</a>
+                <a href="#pricing" class="px-3.5 py-1.5 rounded-full bg-gradient-to-r from-kaaf-gold to-kaaf-amber text-slate-950 font-black hover:brightness-110 shadow-sm transition">عروض الجمعة البيضاء</a>
+            </nav>
+
+            <!-- WhatsApp Action Button (Left in RTL) -->
+            <div class="flex items-center gap-2 order-last">
+                <a href="https://wa.me/966537553910" target="_blank" class="px-3.5 py-1.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-bold flex items-center gap-1.5 transition">
+                    <i class="fa-brands fa-whatsapp text-sm"></i>
+                    <span>تواصل معنا</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Document Content Container -->
+    <main class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-20">
+
+        <!-- ========================================================================= -->
+        <!-- 00 — PROPOSAL HERO BANNER / COVER                                         -->
+        <!-- ========================================================================= -->
+        <section class="relative rounded-[32px] overflow-hidden p-8 sm:p-14 lg:p-16 bg-gradient-to-br from-kaaf-blueDeep/95 via-kaaf-darkSlate/95 to-kaaf-dark/95 border border-kaaf-blue/50 shadow-web-card text-white backdrop-blur-lg">
+            <div class="kaaf-ribbon absolute top-0 left-0 right-0"></div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                <div class="lg:col-span-8 space-y-6">
+                    <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-kaaf-gold/20 border border-kaaf-gold/40 text-kaaf-goldLight text-xs font-bold font-ibm">
+                        <i class="fa-solid fa-fire text-kaaf-roseLight"></i>
+                        <span>White Friday Exclusive Offers | عروض الجمعة البيضاء الحصرية</span>
+                    </div>
+
+                    <div class="space-y-3">
+                        <span class="text-xs sm:text-sm font-bold text-gray-400 block tracking-wider uppercase font-ibm">Riyadh Market Digital Leadership Plan</span>
+                        <h1 class="text-3xl sm:text-5xl font-black text-white leading-tight tracking-tight">
+                            من الانتشار المحلي إلى الريادة الرقمية في سوق الرياض <br>
+                            <span class="text-transparent bg-clip-text bg-gradient-to-l from-kaaf-goldLight via-yellow-200 to-kaaf-gold font-ibm">
+                                الموجه إلى: العساكر للأجهزة الكهربائية والتكييف
+                            </span>
+                        </h1>
+                        <p class="text-sm sm:text-base font-bold text-amber-100/90 font-cairo leading-relaxed max-w-3xl border-r-4 border-kaaf-gold pr-4 py-1 bg-kaaf-blueDeep/40 rounded-l-2xl">
+                            خطة تسويقية متكاملة لزيادة انتشار العساكر للأجهزة الكهربائية والتكييف، واستقطاب العملاء المهتمين بالشراء، وتعزيز حضور المؤسسة في السوق السعودي وربط الواقع الفعلي بالتوسع الرقمي المتقدم.
+                        </p>
+                    </div>
+
+                    <!-- Meta Tags -->
+                    <div class="pt-2 grid grid-cols-2 sm:grid-cols-4 gap-3 text-xs">
+                        <div class="p-3 rounded-2xl bg-black/60 border border-white/10">
+                            <span class="text-gray-400 block text-[11px]">مقدم العرض</span>
+                            <span class="font-black text-white font-ibm">KAAF Group</span>
+                        </div>
+                        <div class="p-3 rounded-2xl bg-black/60 border border-kaaf-gold/40">
+                            <span class="text-gray-400 block text-[11px]">الجهة المستهدفة</span>
+                            <span class="font-black text-kaaf-goldLight font-ibm">العساكر للأجهزة والتكييف</span>
+                        </div>
+                        <div class="p-3 rounded-2xl bg-black/60 border border-white/10">
+                            <span class="text-gray-400 block text-[11px]">نطاق الاستهداف</span>
+                            <span class="font-black text-kaaf-cyanLight">تغطية منطقة الرياض بالكامل</span>
+                        </div>
+                        <div class="p-3 rounded-2xl bg-black/60 border border-kaaf-gold/40">
+                            <span class="text-gray-400 block text-[11px]">الموسم التجاري</span>
+                            <span class="font-black text-kaaf-goldLight">White Friday Deals</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Dual Brand Presentation Box with Client Official Logo -->
+                <div class="lg:col-span-4 flex justify-center">
+                    <div class="w-full space-y-4 p-6 rounded-3xl bg-kaaf-cardBg/90 border border-kaaf-gold/40 shadow-2xl backdrop-blur-md">
+                        <div class="flex items-center justify-between pb-3 border-b border-white/10">
+                            <span class="text-xs font-black text-white flex items-center gap-2">
+                                <i class="fa-solid fa-handshake text-kaaf-gold"></i>
+                                <span>شراكة الريادة والتوسع الرقمي</span>
+                            </span>
+                            <span class="text-[10px] text-kaaf-gold font-mono font-bold">DIGITAL SUITE</span>
+                        </div>
+
+                        <!-- Brand Logos Container -->
+                        <div class="p-4 rounded-2xl bg-black/70 border border-white/10 flex items-center justify-around gap-3">
+                            <div class="text-center space-y-1">
+                                <div class="w-14 h-14 rounded-2xl overflow-hidden border border-kaaf-blueLight/50 p-0.5 bg-black mx-auto shadow-md">
+                                    <img src="https://i.ibb.co/qLQcG9vr/Whats-App-Image-2026-08-26-at-11-29-58.jpg" alt="KAAF Group" class="w-full h-full object-cover rounded-xl" onerror="this.src='https://placehold.co/100x100/0A4C86/ffffff?text=KAAF'">
+                                </div>
+                                <span class="text-[10px] font-bold text-gray-400 block">KAAF Group</span>
+                            </div>
+                            <div class="text-kaaf-gold text-lg font-mono font-bold">✕</div>
+                            <div class="text-center space-y-1">
+                                <div class="w-14 h-14 rounded-2xl overflow-hidden border border-kaaf-gold/50 p-1 bg-white mx-auto shadow-md flex items-center justify-center">
+                                    <img src="https://i.ibb.co/cKPSPGps/logo.png" alt="العساكر للأجهزة الكهربائية والتكييف" class="w-full h-full object-contain" onerror="this.parentElement.innerHTML='<div class=\'text-[10px] font-black text-slate-900\'>العساكر</div>'">
+                                </div>
+                                <span class="text-[10px] font-bold text-kaaf-goldLight block">العساكر</span>
+                            </div>
+                        </div>
+
+                        <!-- Secondary Identity Visual Reference Card -->
+                        <div class="rounded-2xl overflow-hidden border border-white/10 relative group bg-black/50">
+                            <img src="https://i.ibb.co/3yb3TXGD/285628467-777238733262977-8817143678889780631-n.jpg" alt="العساكر للأجهزة الكهربائية والتكييف" class="w-full h-24 object-cover opacity-85 group-hover:opacity-100 transition duration-300" onerror="this.style.display='none'">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent flex items-end p-2.5">
+                                <span class="text-[10px] text-gray-200 font-bold flex items-center gap-1.5">
+                                    <i class="fa-solid fa-snowflake text-sky-400"></i>
+                                    <span>حلول التكييف والأجهزة المنزلية العصرية بالرياض</span>
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="space-y-2 text-xs text-gray-300">
+                            <div class="p-2.5 rounded-xl bg-kaaf-blue/20 border border-kaaf-blue/30 space-y-0.5">
+                                <span class="font-bold text-white flex items-center gap-1.5">
+                                    <i class="fa-solid fa-layer-group text-kaaf-cyanLight"></i>
+                                    المنظومة الثلاثية الموحدة
+                                </span>
+                                <p class="text-[11px] text-gray-300">سوشيال ميديا احترافي • إعلانات ممولة مستهدفة للرياض • سيو محلي SEO.</p>
+                            </div>
+                        </div>
+
+                        <a href="#pricing" class="w-full py-2.5 rounded-xl bg-gradient-to-r from-kaaf-gold to-kaaf-amber text-slate-950 font-black text-xs text-center block hover:brightness-110 transition shadow-md">
+                            استعراض عروض الجمعة البيضاء المعتمدة
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================================================= -->
+        <!-- 01 — STRATEGIC VISION & RIYADH GROWTH OBJECTIVES                          -->
+        <!-- ========================================================================= -->
+        <section id="vision" class="space-y-6">
+            <div class="flex items-center gap-3">
+                <span class="px-3 py-1 rounded-full bg-kaaf-gold/30 text-kaaf-goldLight font-black text-xs border border-kaaf-gold/50 flex items-center gap-1.5">
+                    <i class="fa-solid fa-compass text-[11px]"></i>
+                    <span>أولاً</span>
+                </span>
+                <h2 class="text-2xl sm:text-3xl font-black text-white tracking-wide flex items-center gap-2.5">
+                    <i class="fa-solid fa-lightbulb text-kaaf-gold text-xl"></i>
+                    <span>رؤيتنا لنمو العساكر في سوق الرياض</span>
+                </h2>
+            </div>
+
+            <div class="web-card-gold rounded-3xl p-6 sm:p-10 space-y-6 border-2 border-kaaf-gold/40 shadow-web-card">
+                <div class="flex items-center gap-3 pb-3 border-b border-kaaf-gold/30 text-kaaf-goldLight font-bold text-sm">
+                    <div class="w-9 h-9 rounded-xl bg-kaaf-gold/20 flex items-center justify-center text-kaaf-gold">
+                        <i class="fa-solid fa-bullseye text-base"></i>
+                    </div>
+                    <span>الربط بين الحضور الميداني والريادة الرقمية</span>
+                </div>
+
+                <p class="text-base sm:text-lg text-slate-200 leading-relaxed font-medium">
+                    يتمثل هدفنا في <strong>KAAF Group</strong> في بناء حضور تسويقي متكامل لمؤسسة <strong>العساكر للأجهزة الكهربائية والتكييف</strong> يربط بذكاء بين وجودها الفعلي القوي على أرض الواقع وفروعها ومعارضها في الرياض، وبين حضورها الرقمي المستمر؛ بحيث تصبح العلامة التجارية أكثر وصولاً وانتشاراً، والخيار الأول المألوف والموثوق لدى الأسر والمشاريع والمقبلين على تأثيث وتجهيز منازلهم في كافة أحياء العاصمة.
+                </p>
+
+                <!-- 5 Strategic Objectives Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 pt-2">
+                    <!-- 1 -->
+                    <div class="p-5 rounded-2xl bg-kaaf-darkSlate/95 border border-kaaf-gold/30 space-y-2">
+                        <div class="flex items-center gap-2.5 text-kaaf-goldLight font-bold text-xs">
+                            <div class="w-8 h-8 rounded-lg bg-kaaf-gold/20 flex items-center justify-center text-kaaf-gold">
+                                <i class="fa-solid fa-map-location-dot"></i>
+                            </div>
+                            <span class="text-white text-sm">1. تغطية منطقة الرياض بالكامل</span>
+                        </div>
+                        <p class="text-xs text-gray-300 leading-relaxed">
+                            بناء استراتيجية استهداف جغرافي مدروسة تصل إلى الجمهور المناسب في مختلف أحياء ومناطق الرياض (شمالاً، جنوباً، شرقاً، وغرباً) دون الاكتفاء بنطاق جغرافي ضيق ومحدود.
+                        </p>
+                    </div>
+
+                    <!-- 2 -->
+                    <div class="p-5 rounded-2xl bg-kaaf-darkSlate/95 border border-kaaf-blue/30 space-y-2">
+                        <div class="flex items-center gap-2.5 text-kaaf-cyanLight font-bold text-xs">
+                            <div class="w-8 h-8 rounded-lg bg-kaaf-blue/30 flex items-center justify-center text-kaaf-cyanLight">
+                                <i class="fa-solid fa-users-viewfinder"></i>
+                            </div>
+                            <span class="text-white text-sm">2. استقطاب العملاء المهتمين بالشراء</span>
+                        </div>
+                        <p class="text-xs text-gray-300 leading-relaxed">
+                            استهداف المشترين الجادين الذين لديهم رغبة واحتياج فعلي للأجهزة الكهربائية وأنظمة التكييف، وتحويل هذا الاهتمام السريع إلى استفسارات مباشرة وفرص بيعية ناضجة.
+                        </p>
+                    </div>
+
+                    <!-- 3 -->
+                    <div class="p-5 rounded-2xl bg-kaaf-darkSlate/95 border border-kaaf-green/30 space-y-2">
+                        <div class="flex items-center gap-2.5 text-kaaf-greenLight font-bold text-xs">
+                            <div class="w-8 h-8 rounded-lg bg-kaaf-green/20 flex items-center justify-center text-kaaf-greenLight">
+                                <i class="fa-solid fa-award"></i>
+                            </div>
+                            <span class="text-white text-sm">3. تعزيز الوعي بالعلامة التجارية</span>
+                        </div>
+                        <p class="text-xs text-gray-300 leading-relaxed">
+                            تعريف المجتمع بالوجود الواقعي لمؤسسة العساكر وفروعها وخدمات التوصيل والتركيب والضمانات، وبناء سمعة مؤسسية موثوقة عبر وسائل التواصل الاجتماعي ومحركات البحث.
+                        </p>
+                    </div>
+
+                    <!-- 4 -->
+                    <div class="p-5 rounded-2xl bg-kaaf-darkSlate/95 border border-kaaf-purple/30 space-y-2">
+                        <div class="flex items-center gap-2.5 text-kaaf-purpleLight font-bold text-xs">
+                            <div class="w-8 h-8 rounded-lg bg-kaaf-purple/20 flex items-center justify-center text-kaaf-purpleLight">
+                                <i class="fa-solid fa-chart-line-up"></i>
+                            </div>
+                            <span class="text-white text-sm">4. رفع فرص المبيعات والتحويل</span>
+                        </div>
+                        <p class="text-xs text-gray-300 leading-relaxed">
+                            هندسة مسار تسويقي سلس ينقل العميل من مرحلة التعرف الأولي على منتجات العساكر، إلى المقارنة والاهتمام، وصولاً إلى التواصل الفوري وحسم قرار الشراء والتركيب.
+                        </p>
+                    </div>
+
+                    <!-- 5 -->
+                    <div class="p-5 rounded-2xl bg-kaaf-darkSlate/95 border border-kaaf-cyan/30 space-y-2 col-span-1 md:col-span-2 lg:col-span-2">
+                        <div class="flex items-center gap-2.5 text-kaaf-cyanLight font-bold text-xs">
+                            <div class="w-8 h-8 rounded-lg bg-kaaf-cyan/20 flex items-center justify-center text-kaaf-cyan">
+                                <i class="fa-solid fa-rocket"></i>
+                            </div>
+                            <span class="text-white text-sm">5. التوسع الإلكتروني ومواكبة رؤية المملكة 2030</span>
+                        </div>
+                        <p class="text-xs text-gray-300 leading-relaxed">
+                            تطوير وترسيخ الأصول الرقمية للمؤسسة لتمتلك حضوراً تكنولوجياً متقدماً يتماشى مع تسارع التحول الرقمي والتجارة الإلكترونية في السعودية ويدعم خطط التوسع المستقبلية.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================================================= -->
+        <!-- 02 — THE THREE-PILLAR INTEGRATED SERVICE SUITE                            -->
+        <!-- ========================================================================= -->
+        <section id="services-ecosystem" class="space-y-6">
+            <div class="flex items-center gap-3">
+                <span class="px-3 py-1 rounded-full bg-kaaf-blue/30 text-kaaf-cyanLight font-black text-xs border border-kaaf-blue/50 flex items-center gap-1.5">
+                    <i class="fa-solid fa-layer-group text-[11px]"></i>
+                    <span>ثانياً</span>
+                </span>
+                <h2 class="text-2xl sm:text-3xl font-black text-white tracking-wide flex items-center gap-2.5">
+                    <i class="fa-solid fa-cubes text-kaaf-cyanLight text-xl"></i>
+                    <span>منظومة الخدمات التسويقية المتكاملة</span>
+                </h2>
+            </div>
+
+            <p class="text-sm text-gray-300">
+                لا نطرح خدماتنا كأدوات منفصلة أو إجراءات فردية، بل نعمل من خلال ثلاث ركائز تسويقية رئيسية تتضافر معاً لتشكل محرك نمو متكامل لمؤسسة العساكر:
+            </p>
+
+            <!-- 1. Social Media Pillar -->
+            <div id="social-service" class="web-card-blue rounded-3xl p-6 sm:p-10 space-y-6 border-2 border-kaaf-blue/40 shadow-web-card">
+                <div class="flex items-center justify-between pb-3 border-b border-kaaf-blue/40">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-xl bg-kaaf-blue/40 text-kaaf-cyanLight flex items-center justify-center text-lg">
+                            <i class="fa-solid fa-hashtag"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-black text-white">1. إدارة منصات التواصل الاجتماعي (Social Media Management)</h3>
+                            <span class="text-xs text-kaaf-cyanLight">بناء هوية رقمية موثوقة ومألوفة لدى مجتمع الرياض</span>
+                        </div>
+                    </div>
+                    <span class="text-xs font-mono font-bold text-gray-400 hidden sm:inline">Pillar 01</span>
+                </div>
+
+                <p class="text-xs sm:text-sm text-gray-200 leading-relaxed font-medium">
+                    تمثل منصات التواصل الاجتماعي واجهة التواصل المباشرة واليومية مع الأسر والمهتمين بالأجهزة في الرياض. يتولى فريق KAAF بناء محتوى إبداعي متخصص يبرز مزايا أجهزة التكييف (السبليت، الكاسيت، المركزي)، والغسالات، والثلاجات، والشاشات، والأجهزة المنزلية، وتسهيلات الدفع والضمانات.
+                </p>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 text-xs text-gray-300">
+                    <div class="p-3.5 rounded-xl bg-black/40 border border-white/5 space-y-1">
+                        <span class="font-bold text-white flex items-center gap-1.5"><i class="fa-solid fa-check text-kaaf-cyanLight"></i> إدارة المنصات المناسبة للنشاط</span>
+                        <p class="text-[11px] text-gray-400">التركيز على القنوات الأكثر تأثيراً بالرياض (Instagram, X, TikTok, وغيرها).</p>
+                    </div>
+                    <div class="p-3.5 rounded-xl bg-black/40 border border-white/5 space-y-1">
+                        <span class="font-bold text-white flex items-center gap-1.5"><i class="fa-solid fa-check text-kaaf-cyanLight"></i> استراتيجية محتوى متخصصة</span>
+                        <p class="text-[11px] text-gray-400">محتوى يراعي مواسم الصيف والشتاء واحتياجات التكييف والتجهيز المنزلي.</p>
+                    </div>
+                    <div class="p-3.5 rounded-xl bg-black/40 border border-white/5 space-y-1">
+                        <span class="font-bold text-white flex items-center gap-1.5"><i class="fa-solid fa-check text-kaaf-cyanLight"></i> خطة محتوى وجدولة شهرية</span>
+                        <p class="text-[11px] text-gray-400">تقويم نشر منظم يحدد التوقيتات والأفكار لاعتمادها مسبقاً مع الإدارة.</p>
+                    </div>
+                    <div class="p-3.5 rounded-xl bg-black/40 border border-white/5 space-y-1">
+                        <span class="font-bold text-white flex items-center gap-1.5"><i class="fa-solid fa-check text-kaaf-cyanLight"></i> تصميمات جرافيك احترافية</span>
+                        <p class="text-[11px] text-gray-400">إبراز المنتجات والأجهزة والمواصفات الفنية بهوية بصرية راقية وفخمة.</p>
+                    </div>
+                    <div class="p-3.5 rounded-xl bg-black/40 border border-white/5 space-y-1">
+                        <span class="font-bold text-white flex items-center gap-1.5"><i class="fa-solid fa-check text-kaaf-cyanLight"></i> إبراز العروض والتسهيلات</span>
+                        <p class="text-[11px] text-gray-400">تسليط الضوء على الخصومات، برامج التقسيط المعتمدة، وسرعة التوصيل والتركيب.</p>
+                    </div>
+                    <div class="p-3.5 rounded-xl bg-black/40 border border-white/5 space-y-1">
+                        <span class="font-bold text-white flex items-center gap-1.5"><i class="fa-solid fa-check text-kaaf-cyanLight"></i> محتوى توعوي وإرشادي ذكي</span>
+                        <p class="text-[11px] text-gray-400">مساعدة العميل على حساب سعة التكييف المناسبة للمساحة وتوفير الطاقة الكهربائية.</p>
+                    </div>
+                    <div class="p-3.5 rounded-xl bg-black/40 border border-white/5 space-y-1">
+                        <span class="font-bold text-white flex items-center gap-1.5"><i class="fa-solid fa-check text-kaaf-cyanLight"></i> محتوى تخصصي للتكييف والأجهزة</span>
+                        <p class="text-[11px] text-gray-400">شرح مزايا تقنيات الإنفرتر، أنواع الفلاتر، وقوة التحمل في مناخ المملكة الصيفي.</p>
+                    </div>
+                    <div class="p-3.5 rounded-xl bg-black/40 border border-white/5 space-y-1">
+                        <span class="font-bold text-white flex items-center gap-1.5"><i class="fa-solid fa-check text-kaaf-cyanLight"></i> إبراز الوجود الواقعي والمعارض</span>
+                        <p class="text-[11px] text-gray-400">تصوير الفروع ومستودعات التوريد لبناء ثقة راسخة لدى المشتري الجديد.</p>
+                    </div>
+                    <div class="p-3.5 rounded-xl bg-black/40 border border-white/5 space-y-1">
+                        <span class="font-bold text-white flex items-center gap-1.5"><i class="fa-solid fa-check text-kaaf-cyanLight"></i> تحليل التفاعل وتطوير الأداء</span>
+                        <p class="text-[11px] text-gray-400">رصد استفسارات الجمهور وأكثر المنتجات طلباً لتوجيه خطة المحتوى التالية.</p>
+                    </div>
+                </div>
+
+                <div class="p-3 rounded-xl bg-kaaf-blue/20 border border-kaaf-blue/40 text-xs text-sky-200">
+                    <strong class="text-white">الهدف الجوهري:</strong> بناء حضور رقمي مستمر يجعل اسم "العساكر" الخيار الأول والأكثر موثوقية وألفة لدى الباحثين عن الأجهزة الكهربائية والتكييف في الرياض.
+                </div>
+            </div>
+
+            <!-- 2. Paid Advertising Campaigns Pillar -->
+            <div id="ads-service" class="web-card-green rounded-3xl p-6 sm:p-10 space-y-6 border-2 border-kaaf-green/40 shadow-web-card">
+                <div class="flex items-center justify-between pb-3 border-b border-kaaf-green/40">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-xl bg-kaaf-green/30 text-kaaf-greenLight flex items-center justify-center text-lg">
+                            <i class="fa-solid fa-bullhorn"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-black text-white">2. إدارة الحملات الإعلانية على منصات التواصل (Paid Advertising)</h3>
+                            <span class="text-xs text-kaaf-greenLight">محرك الوصول السريع واختراق كافة أحياء الرياض</span>
+                        </div>
+                    </div>
+                    <span class="text-xs font-mono font-bold text-gray-400 hidden sm:inline">Pillar 02</span>
+                </div>
+
+                <p class="text-xs sm:text-sm text-gray-200 leading-relaxed font-medium">
+                    الإعلانات الممولة هي الأداة القاطعة لتحقيق الانتشار السريع واستهداف الجمهور في اللحظة التي يفكر فيها بتحديث أجهزته أو تركيب تكييف منزله؛ ولا نعتمد في KAAF على النشر العضوي المجاني وحده، بل ندير حملات موجهة تقود المشاهدين نحو الاتصال وزيارة المعارض والشراء.
+                </p>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 text-xs text-gray-300">
+                    <div class="p-3.5 rounded-xl bg-black/40 border border-white/5 space-y-1">
+                        <span class="font-bold text-white flex items-center gap-1.5"><i class="fa-solid fa-check text-kaaf-greenLight"></i> استراتيجية استهداف منطقة الرياض</span>
+                        <p class="text-[11px] text-gray-400">تقسيم جغرافي ذكي يغطي الأحياء الحديثة، المجمعات السكنية، والمناطق ذات الكثافة العالية.</p>
+                    </div>
+                    <div class="p-3.5 rounded-xl bg-black/40 border border-white/5 space-y-1">
+                        <span class="font-bold text-white flex items-center gap-1.5"><i class="fa-solid fa-check text-kaaf-greenLight"></i> استهداف الشرائح المهتمة فعلياً</span>
+                        <p class="text-[11px] text-gray-400">الوصول للمقبلين على الزواج، المنشآت، ومجددي المنازل والباحثين عن عروض الأجهزة.</p>
+                    </div>
+                    <div class="p-3.5 rounded-xl bg-black/40 border border-white/5 space-y-1">
+                        <span class="font-bold text-white flex items-center gap-1.5"><i class="fa-solid fa-check text-kaaf-greenLight"></i> استهداف الاهتمامات والسلوكيات</span>
+                        <p class="text-[11px] text-gray-400">بناء الجماهير بناءً على سلوك الشراء الرقمي، الاهتمام بعروض التكييف، والأجهزة المنزلية.</p>
+                    </div>
+                    <div class="p-3.5 rounded-xl bg-black/40 border border-white/5 space-y-1">
+                        <span class="font-bold text-white flex items-center gap-1.5"><i class="fa-solid fa-check text-kaaf-greenLight"></i> تصميم مواد إعلانية مخصصة</span>
+                        <p class="text-[11px] text-gray-400">إنتاج تصميمات وفيديوهات إعلانية سريعة تركز على العروض الجاذبة وقوة الضمان.</p>
+                    </div>
+                    <div class="p-3.5 rounded-xl bg-black/40 border border-white/5 space-y-1">
+                        <span class="font-bold text-white flex items-center gap-1.5"><i class="fa-solid fa-check text-kaaf-greenLight"></i> إطلاق الحملات على المنصات الفعالة</span>
+                        <p class="text-[11px] text-gray-400">تشغيل الحملات عبر Instagram, Facebook, TikTok حسب ملاءمة وسلوك الجمهور.</p>
+                    </div>
+                    <div class="p-3.5 rounded-xl bg-black/40 border border-white/5 space-y-1">
+                        <span class="font-bold text-white flex items-center gap-1.5"><i class="fa-solid fa-check text-kaaf-greenLight"></i> حملات الوعي والانتشار الواسع</span>
+                        <p class="text-[11px] text-gray-400">حملات مكثفة لترسيخ اسم وموقع العساكر لدى مئات الآلاف من سكان الرياض.</p>
+                    </div>
+                    <div class="p-3.5 rounded-xl bg-black/40 border border-white/5 space-y-1">
+                        <span class="font-bold text-white flex items-center gap-1.5"><i class="fa-solid fa-check text-kaaf-greenLight"></i> حملات الاستفسارات والليدز</span>
+                        <p class="text-[11px] text-gray-400">توجيه العملاء مباشرة لرسائل الواتساب والمحادثات لطلب عروض الأسعار والتركيب.</p>
+                    </div>
+                    <div class="p-3.5 rounded-xl bg-black/40 border border-white/5 space-y-1">
+                        <span class="font-bold text-white flex items-center gap-1.5"><i class="fa-solid fa-check text-kaaf-greenLight"></i> إعادة الاستهداف الذكي (Retargeting)</span>
+                        <p class="text-[11px] text-gray-400">إعادة استهداف كل من تفاعل مع الحسابات أو زار العروض لحثه على إتمام قرار الشراء.</p>
+                    </div>
+                    <div class="p-3.5 rounded-xl bg-black/40 border border-white/5 space-y-1">
+                        <span class="font-bold text-white flex items-center gap-1.5"><i class="fa-solid fa-check text-kaaf-greenLight"></i> تحسين مستمر لكفاءة الإنفاق</span>
+                        <p class="text-[11px] text-gray-400">مراقبة تكلفة الاستفسار واستبعاد الجماهير غير المجدية لتعظيم العائد من كل ريال يُنفق.</p>
+                    </div>
+                </div>
+
+                <div class="p-3 rounded-xl bg-kaaf-green/20 border border-kaaf-green/40 text-xs text-emerald-200">
+                    <strong class="text-white">الهدف الجوهري:</strong> الوصول إلى أكبر شريحة ممكنة من المشترين المحتملين داخل الرياض، مع التركيز على جودة الجمهور وفرص التحويل إلى مبيعات فعلية.
+                </div>
+            </div>
+
+            <!-- 3. SEO Pillar -->
+            <div id="seo-service" class="web-card-purple rounded-3xl p-6 sm:p-10 space-y-6 border-2 border-kaaf-purple/40 shadow-web-card">
+                <div class="flex items-center justify-between pb-3 border-b border-kaaf-purple/40">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-xl bg-kaaf-purple/30 text-kaaf-purpleLight flex items-center justify-center text-lg">
+                            <i class="fa-solid fa-magnifying-glass-chart"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-black text-white">3. تحسين محركات البحث المحلية (SEO Engine Optimization)</h3>
+                            <span class="text-xs text-kaaf-purpleLight">اقتناص العملاء الذين يبحثون بنية شراء في Google</span>
+                        </div>
+                    </div>
+                    <span class="text-xs font-mono font-bold text-gray-400 hidden sm:inline">Pillar 03</span>
+                </div>
+
+                <p class="text-xs sm:text-sm text-gray-200 leading-relaxed font-medium">
+                    يُمثل السيو استثماراً استراتيجياً طويل المدى؛ فالعميل الذي يفتح Google ويكتب "شراء مكيف سبليت بالرياض" أو "أفضل أسعار أجهزة كهربائية بالرياض" هو عميل يمتلك الميزانية ويبحث فقط عمن يشتري منه. مهمتنا هي جعل "العساكر" في صدارة نتائج هذا الباحث.
+                </p>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 text-xs text-gray-300">
+                    <div class="p-3.5 rounded-xl bg-black/40 border border-white/5 space-y-1">
+                        <span class="font-bold text-white flex items-center gap-1.5"><i class="fa-solid fa-check text-kaaf-purpleLight"></i> تحليل الموقع الإلكتروني والوضع الراهن</span>
+                        <p class="text-[11px] text-gray-400">فحص فني لأداء الموقع، سرعته، ومستوى فهرسته الحالي على محركات البحث.</p>
+                    </div>
+                    <div class="p-3.5 rounded-xl bg-black/40 border border-white/5 space-y-1">
+                        <span class="font-bold text-white flex items-center gap-1.5"><i class="fa-solid fa-check text-kaaf-purpleLight"></i> دراسة الكلمات المفتاحية في الرياض</span>
+                        <p class="text-[11px] text-gray-400">حصر الكلمات الأكثر استخداماً لشراء الأجهزة والتكييف في منطقة الرياض ونية الباحثين.</p>
+                    </div>
+                    <div class="p-3.5 rounded-xl bg-black/40 border border-white/5 space-y-1">
+                        <span class="font-bold text-white flex items-center gap-1.5"><i class="fa-solid fa-check text-kaaf-purpleLight"></i> تحسين الصفحات والمحتوى (On-Page)</span>
+                        <p class="text-[11px] text-gray-400">تحديث أوصاف المنتجات وأقسام التكييف لتتطابق بدقة مع ما يبحث عنه المشتري.</p>
+                    </div>
+                    <div class="p-3.5 rounded-xl bg-black/40 border border-white/5 space-y-1">
+                        <span class="font-bold text-white flex items-center gap-1.5"><i class="fa-solid fa-check text-kaaf-purpleLight"></i> تحسين العناوين والأوصاف التعريفية</span>
+                        <p class="text-[11px] text-gray-400">صياغة Meta Titles & Descriptions جذابة تشجع المتصفح على النقر ودخول الموقع.</p>
+                    </div>
+                    <div class="p-3.5 rounded-xl bg-black/40 border border-white/5 space-y-1">
+                        <span class="font-bold text-white flex items-center gap-1.5"><i class="fa-solid fa-check text-kaaf-purpleLight"></i> التركيز على البحث المحلي (Local SEO)</span>
+                        <p class="text-[11px] text-gray-400">ربط الكلمات باسم الرياض وأحيائها الكبرى لتصدر عمليات البحث الجغرافية المجاورة.</p>
+                    </div>
+                    <div class="p-3.5 rounded-xl bg-black/40 border border-white/5 space-y-1">
+                        <span class="font-bold text-white flex items-center gap-1.5"><i class="fa-solid fa-check text-kaaf-purpleLight"></i> الجوانب التقنية وسرعة التصفح</span>
+                        <p class="text-[11px] text-gray-400">معالجة أخطاء الفهرسة وتحسين سرعة الموقع وتجربة الاستخدام على أجهزة الجوال.</p>
+                    </div>
+                    <div class="p-3.5 rounded-xl bg-black/40 border border-white/5 space-y-1">
+                        <span class="font-bold text-white flex items-center gap-1.5"><i class="fa-solid fa-check text-kaaf-purpleLight"></i> استراتيجية محتوى المنتجات والخدمات</span>
+                        <p class="text-[11px] text-gray-400">بناء صفحات غنية بالمعلومات الفنية تجيب عن مقارنات الأجهزة وتخدم نية الشراء.</p>
+                    </div>
+                    <div class="p-3.5 rounded-xl bg-black/40 border border-white/5 space-y-1">
+                        <span class="font-bold text-white flex items-center gap-1.5"><i class="fa-solid fa-check text-kaaf-purpleLight"></i> تحسين الظهور في الخرائط والنتائج المحلية</span>
+                        <p class="text-[11px] text-gray-400">تعزيز فرص وصول العملاء لمواقع الفروع على أرض الواقع عند البحث عن فروع قريبة.</p>
+                    </div>
+                    <div class="p-3.5 rounded-xl bg-black/40 border border-white/5 space-y-1">
+                        <span class="font-bold text-white flex items-center gap-1.5"><i class="fa-solid fa-check text-kaaf-purpleLight"></i> متابعة الترتيب والزيارات العضوية</span>
+                        <p class="text-[11px] text-gray-400">مراقبة تقدم ترتيب الكلمات في Google دورياً وتحليل نمو الزيارات العضوية المجانية.</p>
+                    </div>
+                </div>
+
+                <div class="p-3 rounded-xl bg-kaaf-purple/20 border border-kaaf-purple/40 text-xs text-purple-200">
+                    <strong class="text-white">الهدف الجوهري:</strong> جعل العساكر أكثر قابلية للاكتشاف في اللحظة الحاسمة عندما يبحث العملاء عن الأجهزة الكهربائية والتكييف في الرياض، وترسيخ المصداقية الرقمية للعلامة.
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================================================= -->
+        <!-- 03 — HOW THE THREE SERVICES WORK TOGETHER (FUNNEL VISUALIZATION)          -->
+        <!-- ========================================================================= -->
+        <section id="funnel-synergy" class="space-y-6">
+            <div class="flex items-center gap-3">
+                <span class="px-3 py-1 rounded-full bg-kaaf-gold/30 text-kaaf-goldLight font-black text-xs border border-kaaf-gold/50 flex items-center gap-1.5">
+                    <i class="fa-solid fa-arrows-split-up-and-left text-[11px]"></i>
+                    <span>ثالثاً • مسار العميل</span>
+                </span>
+                <h2 class="text-2xl sm:text-3xl font-black text-white tracking-wide flex items-center gap-2.5">
+                    <i class="fa-solid fa-filter text-kaaf-gold text-xl"></i>
+                    <span>كيف تعمل الخدمات الثلاث معاً؟ (منظومة التسويق المتكاملة)</span>
+                </h2>
+            </div>
+
+            <div class="web-card-gold rounded-3xl p-6 sm:p-10 space-y-8 border-2 border-kaaf-gold/40 shadow-glow-gold">
+                <div class="text-center max-w-3xl mx-auto space-y-2">
+                    <h3 class="text-xl sm:text-2xl font-black text-white font-ibm">
+                        رحلة متكاملة لنقل العميل من مرحلة الاكتشاف إلى قرار الشراء
+                    </h3>
+                    <p class="text-xs sm:text-sm text-gray-300 leading-relaxed font-medium">
+                        «نحن لا ندير ثلاث خدمات منفصلة، بل نبني منظومة تسويقية تعمل فيها كل خدمة لدعم الأخرى، بهدف تحقيق انتشار أوسع واستقطاب عملاء أكثر اهتمامًا ورفع فرص المبيعات».
+                    </p>
+                </div>
+
+                <!-- 5-Stage Visual Funnel Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-5 gap-3.5 text-center text-xs">
+                    <!-- Stage 1 -->
+                    <div class="p-5 rounded-2xl bg-kaaf-darkSlate/95 border border-kaaf-blue/50 space-y-2 flex flex-col justify-between hover:border-kaaf-cyan transition">
+                        <div class="space-y-2">
+                            <span class="w-8 h-8 rounded-full bg-kaaf-blue/40 text-kaaf-cyanLight flex items-center justify-center mx-auto font-bold text-xs border border-kaaf-blue/60">01</span>
+                            <h4 class="text-xs font-black text-white">المرحلة الأولى: الظهور والانتشار</h4>
+                            <p class="text-[11px] text-gray-300 leading-relaxed">
+                                السوشيال ميديا تبني حضوراً مستمراً، والحملات الإعلانية الممولة تكسر الحواجز وتوسع نطاق الوصول في مختلف أحياء الرياض.
+                            </p>
+                        </div>
+                        <div class="text-[10px] text-kaaf-cyanLight font-mono pt-2 border-t border-white/10">Awareness & Reach</div>
+                    </div>
+
+                    <!-- Stage 2 -->
+                    <div class="p-5 rounded-2xl bg-kaaf-darkSlate/95 border border-kaaf-green/50 space-y-2 flex flex-col justify-between hover:border-kaaf-greenLight transition">
+                        <div class="space-y-2">
+                            <span class="w-8 h-8 rounded-full bg-kaaf-green/30 text-kaaf-greenLight flex items-center justify-center mx-auto font-bold text-xs border border-kaaf-green/50">02</span>
+                            <h4 class="text-xs font-black text-white">المرحلة الثانية: جذب الاهتمام</h4>
+                            <p class="text-[11px] text-gray-300 leading-relaxed">
+                                المحتوى الإبداعي والإعلانات الموجهة تجذب المهتمين بالأجهزة، بينما يقتنص الـ SEO الباحثين عن المنتجات في Google.
+                            </p>
+                        </div>
+                        <div class="text-[10px] text-kaaf-greenLight font-mono pt-2 border-t border-white/10">Interest & Discovery</div>
+                    </div>
+
+                    <!-- Stage 3 -->
+                    <div class="p-5 rounded-2xl bg-kaaf-darkSlate/95 border border-kaaf-gold/50 space-y-2 flex flex-col justify-between hover:border-kaaf-gold transition">
+                        <div class="space-y-2">
+                            <span class="w-8 h-8 rounded-full bg-kaaf-gold/20 text-kaaf-gold flex items-center justify-center mx-auto font-bold text-xs border border-kaaf-gold/40">03</span>
+                            <h4 class="text-xs font-black text-white">المرحلة الثالثة: تعزيز الثقة</h4>
+                            <p class="text-[11px] text-gray-300 leading-relaxed">
+                                تكرار الظهور، وجود محتوى احترافي ومعارض واقعية، وتصدر نتائج البحث يرسخ ثقة المشتري ويجعله يفضل العساكر دون تردد.
+                            </p>
+                        </div>
+                        <div class="text-[10px] text-kaaf-gold font-mono pt-2 border-t border-white/10">Trust & Authority</div>
+                    </div>
+
+                    <!-- Stage 4 -->
+                    <div class="p-5 rounded-2xl bg-kaaf-darkSlate/95 border border-kaaf-purple/50 space-y-2 flex flex-col justify-between hover:border-kaaf-purpleLight transition">
+                        <div class="space-y-2">
+                            <span class="w-8 h-8 rounded-full bg-kaaf-purple/30 text-kaaf-purpleLight flex items-center justify-center mx-auto font-bold text-xs border border-kaaf-purple/50">04</span>
+                            <h4 class="text-xs font-black text-white">المرحلة الرابعة: استقطاب فرص البيع</h4>
+                            <p class="text-[11px] text-gray-300 leading-relaxed">
+                                تحويل اهتمام الجمهور إلى زيارات للفروع، ومحادثات واتساب، واستفسارات أسعار، واتصالات شراء مؤكدة عبر القنوات المعتمدة.
+                            </p>
+                        </div>
+                        <div class="text-[10px] text-kaaf-purpleLight font-mono pt-2 border-t border-white/10">Leads & Inquiries</div>
+                    </div>
+
+                    <!-- Stage 5 -->
+                    <div class="p-5 rounded-2xl bg-kaaf-darkSlate/95 border border-emerald-500/50 space-y-2 flex flex-col justify-between hover:border-emerald-400 transition bg-emerald-950/20">
+                        <div class="space-y-2">
+                            <span class="w-8 h-8 rounded-full bg-emerald-900/40 text-emerald-400 flex items-center justify-center mx-auto font-bold text-xs border border-emerald-500/40">05</span>
+                            <h4 class="text-xs font-black text-white">المرحلة الخامسة: التحليل والتطوير</h4>
+                            <p class="text-[11px] text-gray-300 leading-relaxed">
+                                تحليل نتائج الإعلانات، وحركة الزوار، والكلمات الأكثر طلباً لتوجيه الميزانيات التسويقية نحو القنوات والمنتجات الأكثر ربحية.
+                            </p>
+                        </div>
+                        <div class="text-[10px] text-emerald-400 font-mono pt-2 border-t border-white/10">Optimization & ROI</div>
+                    </div>
+                </div>
+
+                <div class="p-4 rounded-2xl bg-black/60 border border-white/10 text-xs text-gray-300 text-center leading-relaxed">
+                    تضمن هذه المنظومة الدائرية أن كل مجهود مبذول في السوشيال ميديا يرفع كفاءة الإعلانات، وأن كل تحسين في السيو يثري مصداقية الحسابات، مما يجعل ميزانيتكم التسويقية استثماراً تراكمياً مستداماً.
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================================================= -->
+        <!-- 04 — WHITE FRIDAY PREMIUM PRICING CARDS                                   -->
+        <!-- ========================================================================= -->
+        <section id="pricing" class="space-y-8">
+            <div class="text-center max-w-2xl mx-auto space-y-2">
+                <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-kaaf-gold/20 border border-kaaf-gold/50 text-kaaf-goldLight text-xs font-black">
+                    <i class="fa-solid fa-tag text-kaaf-gold"></i>
+                    <span>رابعاً • الباقات والاستثمار المعتمد</span>
+                </div>
+                <h2 class="text-3xl sm:text-4xl font-black text-white tracking-tight">باقات وعروض الجمعة البيضاء الخاصة</h2>
+                <p class="text-xs sm:text-sm text-gray-300">هيكل استثماري واضح ومحدد يتيح اختيار مدة التعاقد الأنسب لمؤسسة العساكر</p>
+            </div>
+
+            <!-- Two Comparison Packages Cards -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch">
+
+                <!-- Package 1: Growth Package (3 Months) -->
+                <div class="web-card-blue p-8 rounded-3xl flex flex-col justify-between space-y-6 shadow-web-card border-t-4 border-t-kaaf-cyan relative overflow-hidden">
+                    <div class="absolute top-4 left-4">
+                        <span class="px-3 py-1 rounded-full bg-kaaf-blue/40 text-kaaf-cyanLight text-[11px] font-black border border-kaaf-blue/60 flex items-center gap-1">
+                            <i class="fa-solid fa-gift text-[10px]"></i> White Friday Special Offer
+                        </span>
+                    </div>
+
+                    <div class="space-y-5">
+                        <div class="flex items-center justify-between">
+                            <span class="text-xs font-bold text-kaaf-cyanLight font-ibm uppercase tracking-wider">الباقة الأولى</span>
+                            <span class="px-3 py-1 rounded-full bg-kaaf-blue/30 text-kaaf-cyanLight text-xs font-bold border border-kaaf-blue/50">مدة الباقة: 3 أشهر</span>
+                        </div>
+
+                        <div>
+                            <h3 class="text-2xl font-black text-white font-ibm">باقة النمو – Growth Package</h3>
+                            <span class="text-xs text-gray-400 font-medium">الانطلاقة المنظمة والتأسيس الرقمي لسوق الرياض</span>
+                        </div>
+
+                        <div class="p-4 rounded-2xl bg-black/40 border border-kaaf-blue/30 text-xs text-sky-100 leading-relaxed font-medium">
+                            «باقة مخصصة لبناء حضور رقمي قوي، وتعزيز انتشار العساكر في سوق الرياض، وبدء استقطاب الجمهور المهتم بالأجهزة الكهربائية والتكييف من خلال منظومة تسويقية متكاملة».
+                        </div>
+
+                        <!-- Scope Inclusions -->
+                        <div class="space-y-2 text-xs text-gray-300 pt-2">
+                            <span class="font-bold text-white block">محددات ومشتملات الباقة:</span>
+                            <ul class="space-y-2">
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-kaaf-cyanLight"></i> <span>إدارة منصات التواصل الاجتماعي المناسبة طوال 3 أشهر.</span></li>
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-kaaf-cyanLight"></i> <span>إدارة وتصميم الحملات الإعلانية على منصات التواصل الاجتماعي.</span></li>
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-kaaf-cyanLight"></i> <span>تحسين محركات البحث SEO وتهيئة الظهور المحلي لموقع الشركة.</span></li>
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-kaaf-cyanLight"></i> <span>تقارير أداء دورية توضح نمو التفاعل والاستفسارات.</span></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="pt-6 border-t border-kaaf-blue/40 flex items-center justify-between">
+                        <div>
+                            <span class="text-xs text-gray-400 block">السعر الإجمالي (3 أشهر)</span>
+                            <div class="text-3xl font-black text-white font-ibm">10,500 <span class="text-lg text-kaaf-cyanLight font-cairo">ريال سعودي</span></div>
+                        </div>
+                        <span class="text-xs px-3.5 py-1.5 rounded-xl bg-kaaf-blue/40 text-kaaf-cyanLight font-bold border border-kaaf-blue/60">فقط عشرة آلاف وخمسمائة ريال سعودي</span>
+                    </div>
+                </div>
+
+                <!-- Package 2: Super Growth Package (6 Months - Highly Recommended) -->
+                <div class="web-card-gold p-8 rounded-3xl flex flex-col justify-between space-y-6 shadow-glow-gold border-2 border-kaaf-gold relative overflow-hidden">
+                    <div class="absolute top-4 left-4">
+                        <span class="px-3 py-1 rounded-full bg-emerald-500/20 text-emerald-300 text-[11px] font-black border border-emerald-500/50 flex items-center gap-1 shadow-sm">
+                            <i class="fa-solid fa-crown text-[10px] text-kaaf-gold"></i> الباقة المناسبة والموصى بها لنشاطكم
+                        </span>
+                    </div>
+
+                    <div class="space-y-5">
+                        <div class="flex items-center justify-between">
+                            <span class="text-xs font-bold text-kaaf-goldLight font-ibm uppercase tracking-wider">الباقة الثانية</span>
+                            <span class="px-3 py-1 rounded-full bg-kaaf-gold/20 text-kaaf-goldLight text-xs font-black border border-kaaf-gold/40">مدة الباقة: 6 أشهر</span>
+                        </div>
+
+                        <div>
+                            <div class="inline-block px-2.5 py-0.5 rounded-full bg-kaaf-gold/20 text-kaaf-goldLight text-[10px] font-bold border border-kaaf-gold/40 mb-1">
+                                White Friday Special Offer
+                            </div>
+                            <h3 class="text-2xl font-black text-white font-ibm">باقة السوبر – Super Growth Package</h3>
+                            <span class="text-xs text-kaaf-goldLight font-medium">الاستقرار، تراكم نتائج السيو، والريادة في الرياض</span>
+                        </div>
+
+                        <div class="p-4 rounded-2xl bg-black/40 border border-kaaf-gold/30 text-xs text-amber-100 leading-relaxed font-medium">
+                            «الباقة الأنسب لطبيعة نشاط العساكر وطموحها في التوسع داخل سوق الرياض، حيث تمنح المؤسسة فترة أطول لبناء حضور رقمي مستقر، وتوسيع نطاق الوصول، وتحسين الظهور في محركات البحث، والعمل المستمر على استقطاب العملاء المهتمين وتعزيز فرص المبيعات».
+                        </div>
+
+                        <!-- Scope Inclusions -->
+                        <div class="space-y-2 text-xs text-gray-300 pt-2">
+                            <span class="font-bold text-white block">محددات ومشتملات الباقة:</span>
+                            <ul class="space-y-2">
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-kaaf-gold"></i> <span>إدارة منصات التواصل الاجتماعي باحترافية طوال 6 أشهر متصلة.</span></li>
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-kaaf-gold"></i> <span>إدارة وتطوير الحملات الإعلانية المدفوعة وتغطية أحياء الرياض بالكامل.</span></li>
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-kaaf-gold"></i> <span>تحسين محركات البحث SEO وتراكم تصدر الكلمات الرئيسية في Google.</span></li>
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-kaaf-gold"></i> <span>تغطية المواسم التجارية الكبرى ومواسم الذروة للتكييف والأجهزة.</span></li>
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-kaaf-gold"></i> <span>تحسين مستمر لخوارزميات الاستهداف وتقارير دورية قياسية للإدارة.</span></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="pt-6 border-t border-kaaf-gold/40 flex items-center justify-between">
+                        <div>
+                            <span class="text-xs text-gray-400 block">السعر الإجمالي (6 أشهر)</span>
+                            <div class="text-3xl font-black text-transparent bg-clip-text bg-gradient-to-r from-kaaf-goldLight via-yellow-200 to-kaaf-gold font-ibm">20,000 <span class="text-lg text-kaaf-gold font-cairo">ريال سعودي</span></div>
+                        </div>
+                        <span class="text-xs px-3.5 py-1.5 rounded-xl bg-kaaf-gold/20 text-kaaf-gold font-bold border border-kaaf-gold/50">فقط عشرون ألف ريال سعودي</span>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Financial Clarity Guidelines -->
+            <div class="p-5 rounded-2xl bg-kaaf-darkSlate/90 border border-kaaf-border text-xs text-slate-300 space-y-2">
+                <div class="flex items-center gap-2 text-kaaf-cyanLight font-bold">
+                    <i class="fa-solid fa-circle-info text-base"></i>
+                    <span>محددات الشفافية المالية والتشغيلية:</span>
+                </div>
+                <ul class="list-disc list-inside space-y-1 text-gray-300">
+                    <li>الأسعار الموضحة تمثل <strong>إجمالي تكلفة مدة التعاقد بالكامل</strong> (10,500 ريال سعودي لباقة الـ 3 أشهر، و 20,000 ريال سعودي لباقة الـ 6 أشهر) وليست أسعاراً أو اشتراكات شهرية.</li>
+                    <li>تشمل الباقات كافة أتعاب التخطيط، صناعة المحتوى، التصميم، وإدارة الحملات، وتحسين محركات البحث، والتقارير الدورية.</li>
+                    <li>الميزانية الإعلانية المدفوعة مباشرة للمنصات (Ad Spend) تُحدد وفق رغبة العميل وبما يخدم أهداف التوسع الجغرافي ولا تعتبر مشمولة في أتعاب الإدارة.</li>
+                    <li>لا يتضمن العرض أي مبالغ أو رسوم غير مذكورة صراحة في هذا المستند.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- ========================================================================= -->
+        <!-- 05 — WHY KAAF GROUP? (COMPETITIVE VALUE)                                  -->
+        <!-- ========================================================================= -->
+        <section id="why-kaaf" class="space-y-6">
+            <div class="flex items-center gap-3">
+                <span class="px-3 py-1 rounded-full bg-kaaf-green/30 text-kaaf-greenLight font-black text-xs border border-kaaf-green/50 flex items-center gap-1.5">
+                    <i class="fa-solid fa-handshake text-[11px]"></i>
+                    <span>خامساً • القيمة المضافة</span>
+                </span>
+                <h2 class="text-2xl sm:text-3xl font-black text-white tracking-wide flex items-center gap-2.5">
+                    <i class="fa-solid fa-trophy text-kaaf-greenLight text-xl"></i>
+                    <span>لماذا KAAF؟ — مزايا الشراكة والنجاح المشترك</span>
+                </h2>
+            </div>
+
+            <div class="web-card-green rounded-3xl p-6 sm:p-10 space-y-6 border-2 border-kaaf-green/40 shadow-web-card">
+                <p class="text-sm sm:text-base text-slate-200 leading-relaxed font-medium">
+                    ما تقدمه <strong>KAAF Group</strong> لمؤسسة العساكر ليس مجرد تنفيذ لمهام روتينية، بل شراكة نمو تستند إلى معايير مؤسسية دقيقة:
+                </p>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 text-xs text-gray-300">
+                    <div class="p-4 rounded-2xl bg-kaaf-darkSlate/95 border border-kaaf-green/30 space-y-1.5">
+                        <div class="flex items-center gap-2 text-kaaf-greenLight font-bold">
+                            <i class="fa-solid fa-users-gear text-base"></i>
+                            <span class="text-white text-xs">فريق متخصص ومتكامل</span>
+                        </div>
+                        <p class="text-[11px] text-gray-400 leading-relaxed">فريق يجمع بين صناع المحتوى الإبداعي، خبراء الحملات الإعلانية، ومهندسي السيو والتحليل الرقمي.</p>
+                    </div>
+
+                    <div class="p-4 rounded-2xl bg-kaaf-darkSlate/95 border border-kaaf-green/30 space-y-1.5">
+                        <div class="flex items-center gap-2 text-kaaf-greenLight font-bold">
+                            <i class="fa-solid fa-map text-base"></i>
+                            <span class="text-white text-xs">استراتيجية مخصصة لسوق الرياض</span>
+                        </div>
+                        <p class="text-[11px] text-gray-400 leading-relaxed">بناء الخطط وفق طبيعة وسلوك المستهلك في الرياض وسوق الأجهزة والتكييف بالمملكة.</p>
+                    </div>
+
+                    <div class="p-4 rounded-2xl bg-kaaf-darkSlate/95 border border-kaaf-green/30 space-y-1.5">
+                        <div class="flex items-center gap-2 text-kaaf-greenLight font-bold">
+                            <i class="fa-solid fa-link text-base"></i>
+                            <span class="text-white text-xs">تكامل المسارات لا تشتتها</span>
+                        </div>
+                        <p class="text-[11px] text-gray-400 leading-relaxed">ربط السوشيال ميديا بالإعلانات والسيو لتعمل كمنظومة موحدة تعزز كل خدمة مسار الأخرى.</p>
+                    </div>
+
+                    <div class="p-4 rounded-2xl bg-kaaf-darkSlate/95 border border-kaaf-green/30 space-y-1.5">
+                        <div class="flex items-center gap-2 text-kaaf-greenLight font-bold">
+                            <i class="fa-solid fa-chart-pie text-base"></i>
+                            <span class="text-white text-xs">متابعة وتحليل مستمر للأداء</span>
+                        </div>
+                        <p class="text-[11px] text-gray-400 leading-relaxed">رصد يومي للنتائج ومؤشرات التفاعل والوصول وتقديم تقارير دورية شفافة للإدارة.</p>
+                    </div>
+
+                    <div class="p-4 rounded-2xl bg-kaaf-darkSlate/95 border border-kaaf-green/30 space-y-1.5">
+                        <div class="flex items-center gap-2 text-kaaf-greenLight font-bold">
+                            <i class="fa-solid fa-user-check text-base"></i>
+                            <span class="text-white text-xs">التركيز على جودة الجمهور</span>
+                        </div>
+                        <p class="text-[11px] text-gray-400 leading-relaxed">استهداف المشترين الجادين والعملاء المحتملين فعلياً وليس مجرد حصد أرقام مشاهدات سطحية.</p>
+                    </div>
+
+                    <div class="p-4 rounded-2xl bg-kaaf-darkSlate/95 border border-kaaf-green/30 space-y-1.5">
+                        <div class="flex items-center gap-2 text-kaaf-greenLight font-bold">
+                            <i class="fa-solid fa-arrow-trend-up text-base"></i>
+                            <span class="text-white text-xs">تطوير قائم على الأرقام الواقعية</span>
+                        </div>
+                        <p class="text-[11px] text-gray-400 leading-relaxed">تعديل وتحسين الحملات الإعلانية ومحتوى السيو بناءً على استجابة الميدان وحجم الاستفسارات.</p>
+                    </div>
+                </div>
+
+                <div class="p-4 rounded-2xl bg-black/60 border border-white/10 text-xs text-gray-400 text-center">
+                    * نلتزم في KAAF ببذل أقصى عناية مهنية والالتزام بأعلى معايير جودة التنفيذ المتفق عليها، دون تقديم وعود مسبقة بأرقام مبيعات قطعية أو نتائج مضمونة حتمياً نظراً لارتباط ذلك بقرارات العملاء وتفاعل السوق.
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================================================= -->
+        <!-- 06 — CONCLUSION & CALL TO STRATEGIC PARTNERSHIP                           -->
+        <!-- ========================================================================= -->
+        <section id="conclusion" class="relative rounded-[32px] overflow-hidden p-8 sm:p-14 bg-gradient-to-br from-kaaf-blueDeep via-kaaf-darkSlate to-kaaf-dark border border-kaaf-blueLight/40 text-center space-y-8 shadow-web-card">
+            <div class="kaaf-ribbon absolute top-0 left-0 right-0"></div>
+
+            <div class="max-w-3xl mx-auto space-y-4">
+                <div class="w-16 h-16 rounded-2xl overflow-hidden border-2 border-kaaf-gold shadow-glow-gold mx-auto p-0.5 bg-black">
+                    <img src="https://i.ibb.co/qLQcG9vr/Whats-App-Image-2026-08-26-at-11-29-58.jpg" alt="KAAF Group Logo" class="w-full h-full object-cover rounded-xl" onerror="this.src='https://placehold.co/100x100/0A4C86/ffffff?text=KAAF'">
+                </div>
+
+                <span class="text-xs font-bold text-kaaf-cyanLight font-mono uppercase tracking-widest block">KAAF Group × Alasaker • Strategic Growth Partnership</span>
+
+                <h3 class="text-2xl sm:text-4xl font-black text-white leading-tight">
+                    رحلة نمو العساكر تبدأ بخطوة استراتيجية
+                </h3>
+
+                <p class="text-sm sm:text-base text-gray-200 leading-relaxed font-medium">
+                    نؤمن في <strong>KAAF</strong> أن قوة العلامة التجارية لا تقتصر على جودة ما تقدمه، بل تمتد إلى قدرتها على الوصول إلى عملائها في الوقت والمكان المناسبين.
+                </p>
+                <p class="text-sm sm:text-base text-gray-200 leading-relaxed font-medium">
+                    ومن خلال دمج إدارة منصات التواصل الاجتماعي والحملات الإعلانية وتحسين محركات البحث، نطمح إلى بناء حضور رقمي متكامل للعساكر، يعزز انتشارها في الرياض، ويرفع فرص وصولها إلى العملاء المهتمين بالشراء، ويدعم مسيرتها نحو التوسع الرقمي بما يتماشى مع رؤية المملكة 2030.
+                </p>
+
+                <div class="pt-2 text-lg sm:text-xl font-black text-transparent bg-clip-text bg-gradient-to-r from-kaaf-goldLight via-yellow-200 to-kaaf-gold font-ibm">
+                    KAAF Group – شريككم في بناء الحضور الرقمي وتحقيق النمو.
+                </div>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="pt-4 flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a href="https://wa.me/966537553910" target="_blank" class="px-8 py-3.5 rounded-2xl bg-gradient-to-r from-kaaf-gold to-kaaf-amber text-slate-950 font-black text-xs shadow-xl flex items-center gap-2 hover:brightness-110 transition">
+                    <i class="fa-brands fa-whatsapp text-base"></i>
+                    <span>مناقشة بدء العمل وتأكيد اعتماد الباقة المختارة</span>
+                </a>
+                <a href="https://kaafmarketing.sa/" target="_blank" class="px-6 py-3.5 rounded-2xl bg-kaaf-dark border border-kaaf-border text-white font-bold text-xs hover:border-kaaf-cyan transition flex items-center gap-2">
+                    <i class="fa-solid fa-globe text-kaaf-cyanLight"></i>
+                    <span>الموقع الرسمي: kaafmarketing.sa</span>
+                </a>
+            </div>
+
+            <!-- Formal Signatures Box -->
+            <div class="pt-8 border-t border-white/10 grid grid-cols-1 md:grid-cols-2 gap-6 text-right text-xs text-gray-400">
+                <div class="space-y-1">
+                    <span class="text-white font-bold block text-sm">مقدم العرض:</span>
+                    <p class="text-gray-300 font-bold">KAAF Group for Marketing, Software & Media Solutions</p>
+                    <p>مجموعة كاف لحلول التسويق والبرمجيات والحلول الإعلامية</p>
+                    <p class="font-mono text-gray-500">المملكة العربية السعودية • الرياض</p>
+                </div>
+                <div class="space-y-1 md:text-left">
+                    <span class="text-white font-bold block text-sm">الموجه إليه العرض:</span>
+                    <p class="text-gray-300 font-bold">العساكر للأجهزة الكهربائية والتكييف</p>
+                    <p>الاسم والصفة: ................................................................</p>
+                    <p>التوقيع والختم: ................................................</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Interactive Ambient Canvas Script -->
+    <script>
+        (function() {
+            const canvas = document.getElementById('interactive-bg-canvas');
+            if (!canvas) return;
+            const ctx = canvas.getContext('2d');
+            let width, height;
+            let particles = [];
+            const particleCount = 40;
+            const colors = ['#0A4C86', '#06B6D4', '#00875A', '#7C3AED', '#D4AF37'];
+
+            function resize() {
+                width = canvas.width = window.innerWidth;
+                height = canvas.height = window.innerHeight;
+            }
+
+            window.addEventListener('resize', resize);
+
+            class Particle {
+                constructor() {
+                    this.x = Math.random() * width;
+                    this.y = Math.random() * height;
+                    this.vx = (Math.random() - 0.5) * 0.7;
+                    this.vy = (Math.random() - 0.5) * 0.7;
+                    this.radius = Math.random() * 2 + 1;
+                    this.color = colors[Math.floor(Math.random() * colors.length)];
+                    this.alpha = Math.random() * 0.35 + 0.2;
+                }
+
+                update() {
+                    this.x += this.vx;
+                    this.y += this.vy;
+                    if (this.x < 0 || this.x > width) this.vx *= -1;
+                    if (this.y < 0 || this.y > height) this.vy *= -1;
+                }
+
+                draw() {
+                    ctx.beginPath();
+                    ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+                    ctx.fillStyle = this.color;
+                    ctx.globalAlpha = this.alpha;
+                    ctx.fill();
+                }
+            }
+
+            function init() {
+                resize();
+                particles = [];
+                for (let i = 0; i < particleCount; i++) {
+                    particles.push(new Particle());
+                }
+            }
+
+            function connect() {
+                const maxDist = 130;
+                for (let a = 0; a < particles.length; a++) {
+                    for (let b = a + 1; b < particles.length; b++) {
+                        let dx = particles[a].x - particles[b].x;
+                        let dy = particles[a].y - particles[b].y;
+                        let dist = Math.sqrt(dx * dx + dy * dy);
+
+                        if (dist < maxDist) {
+                            ctx.beginPath();
+                            ctx.moveTo(particles[a].x, particles[a].y);
+                            ctx.lineTo(particles[b].x, particles[b].y);
+                            ctx.strokeStyle = '#D4AF37';
+                            ctx.globalAlpha = (1 - (dist / maxDist)) * 0.2;
+                            ctx.lineWidth = 1;
+                            ctx.stroke();
+                        }
+                    }
+                }
+            }
+
+            function animate() {
+                ctx.clearRect(0, 0, width, height);
+                ctx.globalAlpha = 1;
+                for (let i = 0; i < particles.length; i++) {
+                    particles[i].update();
+                    particles[i].draw();
+                }
+                connect();
+                requestAnimationFrame(animate);
+            }
+
+            window.onload = function() {
+                init();
+                animate();
+            };
+        })();
+    </script>
+</body>
+</html>
